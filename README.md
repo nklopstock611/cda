@@ -9,8 +9,6 @@ Repo para la materia Ciencia de Datos.
 * \[Nicolás Klopstock Triana]
 * \[Erich Giusseppe Soto Parada]
 
-*(Reemplazar con los nombres reales del equipo.)*
-
 ## Objetivo
 
 Disminuir la mora y empezar a identificar estrategias efectivas para reducir la probabilidad de cancelación en reservas hoteleras, priorizando segmentos críticos y condiciones operativas asociadas al riesgo.
