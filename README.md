@@ -98,7 +98,7 @@ En síntesis, el árbol entrega:
 
 ## Dependencias
 
-* Python 3.9+
+* Python 3.10+
 * Pandas
 * NumPy
 * Matplotlib / Seaborn
