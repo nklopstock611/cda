@@ -6,10 +6,8 @@ Repo para la materia Ciencia de Datos.
 
 ## Integrantes del Equipo
 
-* \[Nombre 1]
-* \[Nombre 2]
-* \[Nombre 3]
-* \[Nombre 4]
+* \[Nicolás Klopstock Triana]
+* \[Erich Giusseppe Soto Parada]
 
 *(Reemplazar con los nombres reales del equipo.)*
 
