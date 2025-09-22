@@ -78,7 +78,7 @@ En síntesis, el árbol entrega:
 
    ```bash
    git clone https://github.com/usuario/proyecto-cancelaciones.git
-   cd proyecto-cancelaciones
+   cd cda
    ```
 2. Instalar dependencias:
 
