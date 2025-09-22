@@ -85,7 +85,11 @@ En síntesis, el árbol entrega:
    ```bash
    pip install -r requirements.txt
    ```
-3. Ejecutar análisis principal:
+3. Preparar los datos:
+   - Crear una carpeta llamada `data/` en la raíz del proyecto.
+   - Colocar dentro de esta carpeta todos los archivos de datos necesarios para la ejecución del notebook.
+   
+5. Ejecutar análisis principal:
    Ejecute celda por celda
 
    ```bash
