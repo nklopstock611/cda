@@ -86,9 +86,10 @@ En síntesis, el árbol entrega:
    pip install -r requirements.txt
    ```
 3. Ejecutar análisis principal:
+   Ejecute celda por celda
 
    ```bash
-   python main.py
+   hotel_bookings_modified.ipynb
    ```
 
 ## Dependencias
