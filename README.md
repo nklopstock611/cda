@@ -28,25 +28,25 @@ Este proyecto abarca:
 
 ### Qué vimos
 
-El descriptivo muestra concentración de riesgo en *City Hotel* (Fig.\~\ref{fig\:hotel}) y en canales/segmentos *Online TA* y *TA/TO* (Fig.\~\ref{fig\:segments}), con señales numéricas donde *lead\_time* y *adr* se asocian con mayor probabilidad de cancelación (Fig.\~\ref{fig\:corr}). El *clustering* identifica un grupo extremo (tasa cercana a 1.0 y \$n\$ relevante) que combina *lead\_time* muy alto, *TA/TO* y *No Refund*. El árbol confirma reglas simples y accionables: las particiones por *deposit\_type\_No Refund*, *hotel\_City Hotel*, *lead\_time* y *market\_segment\_Online TA* capturan buena parte del riesgo.
+El descriptivo muestra concentración de riesgo en *City Hotel* y en canales/segmentos *Online TA* y *TA/TO*, con señales numéricas donde *lead_time* y *adr* se asocian con mayor probabilidad de cancelación. El *clustering* identifica un grupo extremo (tasa cercana a 1.0 y $n$ relevante) que combina *lead_time* muy alto, *TA/TO* y *No Refund*. El árbol confirma reglas simples y accionables: las particiones por *deposit_type_No Refund*, *hotel_City Hotel*, *lead_time* y *market_segment_Online TA* capturan buena parte del riesgo.
 
 ### Acciones inmediatas (dónde intervenir)
 
-* **City Hotel** (Fig.\~\ref{fig\:hotel}): investigar causas específicas del mayor porcentaje de cancelación (mix de canal, pricing, experiencia); priorizar acciones allí por su combinación de tasa alta y volumen.
-* **Canales/segmentos de alto aporte al problema** (Fig.\~\ref{fig\:segments}): enfocar revisión en *Online TA* y *TA/TO* (proporción y volumen altos). Objetivo: entender por qué cancelan más y qué ajustes de proceso/condiciones reducen la deserción.
-* **Clientes *Transient*** (Fig.\~\ref{fig\:segments}): analizar por qué concentran mayor cancelación (anticipación, canal, precio) y documentar prácticas que funcionan en subgrupos de menor riesgo.
-* **Reservas con *lead\_time* largo y *adr* alto** (Fig.\~\ref{fig\:corr}): priorizar su seguimiento por mayor propensión e impacto económico; definir umbrales operativos de atención temprana basados en estas dos señales.
-* **Room types con mayor peso en el riesgo** (Fig.\~\ref{fig\:rooms}): revisar expectativas y pricing del tipo A (tanto reservado como asignado); verificar si hay desalineación entre promesa y experiencia.
+* **City Hotel**: investigar causas específicas del mayor porcentaje de cancelación (mix de canal, pricing, experiencia); priorizar acciones allí por su combinación de tasa alta y volumen.
+* **Canales/segmentos de alto aporte al problema**: enfocar revisión en *Online TA* y *TA/TO* (proporción y volumen altos). Objetivo: entender por qué cancelan más y qué ajustes de proceso/condiciones reducen la deserción.
+* **Clientes *Transient***: analizar por qué concentran mayor cancelación (anticipación, canal, precio) y documentar prácticas que funcionan en subgrupos de menor riesgo.
+* **Reservas con *lead_time* largo y *adr* alto**: priorizar su seguimiento por mayor propensión e impacto económico; definir umbrales operativos de atención temprana basados en estas dos señales.
+* **Room types con mayor peso en el riesgo**: revisar expectativas y pricing del tipo A (tanto reservado como asignado); verificar si hay desalineación entre promesa y experiencia.
 
 ### Acciones de calidad de datos y gobernanza
 
-* **Auditar *deposit\_type\_No Refund***: la tasa observada es contraintuitiva; validar significado, momento de registro y consistencia histórica antes de usarla para decisiones.
-* **Revisar variables cercanas a operación tardía** (p.ej., *assigned\_room\_type*, *room\_mismatch*; Fig.\~\ref{fig\:rooms} y Fig.\~\ref{fig\:mismatch}): confirmar su semántica y evitar *leakage* en modelos que predicen al momento de la reserva.
+* **Auditar *deposit_type_No Refund***: la tasa observada es contraintuitiva; validar significado, momento de registro y consistencia histórica antes de usarla para decisiones.
+* **Revisar variables cercanas a operación tardía** (p.ej., *assigned_room_type*, *room_mismatch*): confirmar su semántica y evitar *leakage* en modelos que predicen al momento de la reserva.
 * **Etiquetas y categorías** (p.ej., unificación de “No Refund/Non Refund”, “Online TA/TA”): normalizar nomenclaturas para análisis y despliegues consistentes.
 
 ### Hallazgos de clústers (grupos críticos y rasgos operativos)
 
-El análisis del codo y de la silueta (Figs.\~\ref{fig\:cluster-criterios}) sugiere \$k=4\$; la proyección bidimensional (Fig.\~\ref{fig\:cluster-pca}) hace visible un *grupo crítico* claramente separado del resto. Este clúster concentra una **tasa de cancelación cercana a 1.0** con \$n\$ relevante e integra un patrón operativo muy definido: *lead\_time* **muy alto**, *adr* por debajo del promedio, predominio de *TA/TO* (offline), cliente *Transient* y presencia total de *No Refund*.
+El análisis del codo y de la silueta sugiere $k=4$; la proyección bidimensional hace visible un grupo crítico claramente separado del resto. Este clúster concentra una tasa de cancelación cercana a 1.0 con $n$ relevante e integra un patrón operativo muy definido: lead_time muy alto, adr por debajo del promedio, predominio de TA/TO (offline), cliente Transient y presencia total de No Refund.
 Recomendaciones:
 
 1. Trazar el flujo end-to-end de ese segmento (origen de demanda, acuerdos comerciales, mensajes y tiempos de reconfirmación).
