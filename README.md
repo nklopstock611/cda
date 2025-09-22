@@ -63,7 +63,7 @@ Los otros tres clústers muestran **tasas moderadas/bajas** con perfiles más he
 El modelo supervisado (Fig.\~\ref{tab\:test-metrics} y Fig.\~\ref{tab\:top10-vars}) confirma pocas palancas, pero muy influyentes, y las organiza en reglas operables.
 
 * El primer corte es *deposit\_type\_No Refund*: múltiples ramas convergen a cancelación → auditar definición antes de usarla.
-* En ausencia de *No Refund*, el árbol usa *hotel\_City Hotel*, *lead\_time* y *market\_segment\_Online TA* para separar riesgo. Umbrales prácticos (ej. *lead\_time* ≈ 10–12 días) diferencian claramente la propensión.
+* Ademas de *No Refund*, el árbol usa *hotel\_City Hotel*, *lead\_time* y *market\_segment\_Online TA* para separar riesgo. Umbrales prácticos (ej. *lead\_time* ≈ 10–12 días) diferencian claramente la propensión.
 * La relevancia de *customer\_type\_Transient* y *adr* indica que anticipación + canal + precio forman un triángulo crítico: reservas de *lead\_time* largo, en *City Hotel* y *Online TA*, con *adr* relativamente alto → deben entrar a listas de seguimiento temprano.
 
 En síntesis, el árbol entrega:
